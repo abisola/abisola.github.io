@@ -1,0 +1,87 @@
+body {
+  background-color: #47BBB3;
+  color: #FCFBF2;
+  font-family: 'Open Sans', sans-serif;
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-bottom: 2px solid #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+.assessment p {
+  font-weight: 200;
+  font-size: 1.6rem;
+  line-height: 0.5rem;
+}
+
+.assessment .assessor {
+  float: right;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 11px;
+}
+
+.assessment .detail {
+  margin-left: 120px;
+}
+
+.assessment .assessment-type {
+  text-transform: uppercase;;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  float: left;
+  display: inline-block;
+  margin-top: 11px;
+}
+
+.assessment .assessment-type.alpha {
+  background-color: #F47738;
+}
+
+.assessment .assessment-type.beta {
+  background-color: #D73380;
+}
+
+.assessment .assessment-type.live {
+  background-color: #859A46;
+}
+
+.bignumber {
+  padding-left: 2rem;
+  padding-top: 4rem;
+}
+
+.bignumber h2 {
+  font-size: 20rem;
+  margin: 0;
+  margin-top: -6rem;
+}
+
+.bignumber p {
+  font-size: 4rem;
+  margin-bottom: 0;
+  font-weight: 900;
+  color: #2A827D;
+}
