@@ -1,13 +1,4 @@
 <html>
-<!--
-https://docs.google.com/spreadsheets/d/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-yala1azs/edit?usp=sharing
-https://docs.google.com/spreadsheets/d/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-yala1azs/pubhtml
-
-JSON Format:
-https://spreadsheets.google.com/feeds/list/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-yala1azs/od6/public/basic?alt=json
-
-https://spreadsheets.google.com/feeds/list/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-yala1azs/od6/public/values?alt=json-in-script&callback=
--->
   <head>
     <title>Upcoming Assessments</title>
 
@@ -29,6 +20,12 @@ https://spreadsheets.google.com/feeds/list/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-y
     <ul class="scrolling-item bignumber">
       <p>Savings made this year</p>
       <h2>&pound;339m</h2>
+    </ul>
+
+    <ul class="scrolling-item bignumber" id="incomplete-panel">
+      <p>Incomplete panel</p>
+      <span class="sub">In next 3 weeks</span>
+      <h2 class="rounded">0</h2>
     </ul>
 
     <script id="template" type="x-tmpl-mustache">
