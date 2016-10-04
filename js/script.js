@@ -1,6 +1,10 @@
 
 var thisweekfeed = "https://spreadsheets.google.com/feeds/list/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-yala1azs/od6/public/basic?alt=json";
 var nextweekfeed = "https://spreadsheets.google.com/feeds/list/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-yala1azs/oxuxkoi/public/basic?alt=json";
+var numbersfeed = "https://spreadsheets.google.com/feeds/list/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-yala1azs/opd6j2h/public/basic?alt=json";
+//
+//https://spreadsheets.google.com/feeds/worksheets/1pFCjnpg3dESVAAaZ3mqr0IHwjzU2-a7Ubd-yala1azs/private/full
+
 
 var _week;
 var pause = 16000;
@@ -18,6 +22,9 @@ weekdays[3] = "Wed";
 weekdays[4] = "Thu";
 weekdays[5] = "Fri";
 weekdays[6] = "Sat";
+
+var debugmode = false;
+var debug_item = 3;
 
 // onLoad
 $(function() {
@@ -57,8 +64,38 @@ $(function() {
     $("#nextweek-list").html(rendered);
   });
 
+  //other interesting data...
+  //TODO this is BAD!!
+  $.getJSON(numbersfeed, function(data){
+
+    var entry = data.feed.entry;
+    var numbers = [];
+    $(entry).each(function(op){
+      var _title = this.title.$t;
+      var _content = 0;
+      try {
+        _content = this.content.$t.split(": ")[1];
+      } catch (e) {
+        console.log("unable to get data.. "+e);
+      }
+
+      numbers.push(_content);
+    });
+
+    //for incomplete numbers...
+    $("#incomplete-panel h2").text(numbers[0]);
+
+    // console.log(rendered);
+    // $("#nextweek-list").html(rendered);
+  });
+
+
   // scroll(10000);
-  setTimeout(transition,pause);
+  if (!debugmode) {
+    setTimeout(transition,pause);
+  } else {
+    $('.scrolling-item').hide().eq(3).show();
+  }
 });
 
 function transition(){
