@@ -73,6 +73,18 @@ li {
   padding-top: 4rem;
 }
 
+.bignumber .sub {
+  font-size: 2rem;
+}
+
+.bignumber h2.rounded {
+  background-color: orange;
+  border-radius: 50% 50%;
+  text-align: center;
+  width: 28rem;
+  margin-top: 4rem;
+}
+
 .bignumber h2 {
   font-size: 20rem;
   margin: 0;
