@@ -88,6 +88,10 @@ $(function() {
     //for savings... 
     $("#savings-number h2").text(numbers[1]);
 
+    
+    //date for savings
+    $("#savings-date").text(numbers[2]);
+    
     // console.log(rendered);
     // $("#nextweek-list").html(rendered);
   });
