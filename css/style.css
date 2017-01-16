@@ -99,7 +99,7 @@ li {
 }
 
 #savings-number h2::before { 
-  content: "&pound;";
+  content: "\00a3"; /* this is the escaped numeric code for the pound sign */
 }
 #savings-number h2::after { 
   content: "m";
