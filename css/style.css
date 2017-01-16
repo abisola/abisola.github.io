@@ -97,3 +97,10 @@ li {
   font-weight: 900;
   color: #2A827D;
 }
+
+#savings-number h2::before { 
+  content: "&pound;";
+}
+#savings-number h2::after { 
+  content: "m";
+}
