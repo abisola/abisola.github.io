@@ -85,6 +85,9 @@ $(function() {
     //for incomplete numbers...
     $("#incomplete-panel h2").text(numbers[0]);
 
+    //for savings... 
+    $("#savings-number h2").text(numbers[1]);
+
     // console.log(rendered);
     // $("#nextweek-list").html(rendered);
   });
